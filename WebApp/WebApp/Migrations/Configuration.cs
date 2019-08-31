@@ -8,14 +8,14 @@ namespace WebApp.Migrations
     using System.Linq;
     using WebApp.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebApp.Persistence.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebApp.Persistence.RADBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WebApp.Persistence.ApplicationDbContext context)
+        protected override void Seed(WebApp.Persistence.RADBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

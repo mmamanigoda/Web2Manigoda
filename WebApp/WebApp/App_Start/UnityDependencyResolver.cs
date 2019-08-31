@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -63,13 +64,24 @@ namespace WebApp.App_Start
         {
             // NOTE: To load from web.config uncomment the line below.
             // Make sure to add a Unity.Configuration to the using statements.
-            // container.LoadConfiguration();
+
+            //container.LoadConfiguration();
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
            
-            container.RegisterType<DbContext, ApplicationDbContext>(new PerResolveLifetimeManager());
+            container.RegisterType<DbContext, RADBContext>(new PerResolveLifetimeManager());
             container.RegisterType<IUnitOfWork, DemoUnitOfWork>();
+            container.RegisterType<IItemRepository, ItemRepository>();
+            container.RegisterType<ITicketRepository, TicketRepository>();
+            container.RegisterType<IStationRepository, StationRepository>();
+            container.RegisterType<IStationLineRepository, StationLineRepository>();
+            container.RegisterType<ILineRepository, LineRepository>();
+            container.RegisterType<ITimeTableRepository, TimeTableRepository>();
+            container.RegisterType<IPriceListRepository, PriceListRepository>();
+            container.RegisterType<IPriceListItemRepository, PriceListItemRepository>();
+            container.RegisterType<ISecureDataFormat<AuthenticationTicket>, CustomJwtFormat>(new InjectionConstructor("http://localhost:52295/"));
+        
         }
 
         public void Dispose()

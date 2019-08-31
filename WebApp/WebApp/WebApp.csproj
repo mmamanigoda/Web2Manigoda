@@ -259,13 +259,43 @@
     <Compile Include="Migrations\201905222056072_InitialMigration.Designer.cs">
       <DependentUpon>201905222056072_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908301328190_TheFirstOne.cs" />
+    <Compile Include="Migrations\201908301328190_TheFirstOne.Designer.cs">
+      <DependentUpon>201908301328190_TheFirstOne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Line.cs" />
+    <Compile Include="Models\Pricelist.cs" />
+    <Compile Include="Models\PriceListItem.cs" />
+    <Compile Include="Models\Station.cs" />
+    <Compile Include="Models\StationLine.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\TimeTable.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Persistence\RADBContext.cs" />
+    <Compile Include="Persistence\Repository\IItemRepository.cs" />
+    <Compile Include="Persistence\Repository\ILineRepository.cs" />
+    <Compile Include="Persistence\Repository\IPriceListItemRepository.cs" />
+    <Compile Include="Persistence\Repository\IPriceListRepository.cs" />
     <Compile Include="Persistence\Repository\IRepository.cs" />
+    <Compile Include="Persistence\Repository\IStationLineRepository.cs" />
+    <Compile Include="Persistence\Repository\IStationRepository.cs" />
+    <Compile Include="Persistence\Repository\ItemRepository.cs" />
+    <Compile Include="Persistence\Repository\ITicketRepository.cs" />
+    <Compile Include="Persistence\Repository\ITimeTableRepository.cs" />
+    <Compile Include="Persistence\Repository\LineRepository.cs" />
+    <Compile Include="Persistence\Repository\PriceListItemRepository.cs" />
+    <Compile Include="Persistence\Repository\PriceListRepository.cs" />
     <Compile Include="Persistence\Repository\Repository.cs" />
+    <Compile Include="Persistence\Repository\StationLineRepository.cs" />
+    <Compile Include="Persistence\Repository\StationRepository.cs" />
+    <Compile Include="Persistence\Repository\TicketRepository.cs" />
+    <Compile Include="Persistence\Repository\TimeTableRepository.cs" />
     <Compile Include="Persistence\UnitOfWork\DemoUnitOfWork.cs" />
     <Compile Include="Persistence\UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -368,6 +398,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905222056072_InitialMigration.resx">
       <DependentUpon>201905222056072_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908301328190_TheFirstOne.resx">
+      <DependentUpon>201908301328190_TheFirstOne.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

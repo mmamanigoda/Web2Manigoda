@@ -11,9 +11,17 @@ using System.Web;
 
 namespace WebApp.Models
 {
-    // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUser:IdentityUser
     {
+
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public bool Active { get; set; }
+        public string ImageUrl { get; set; }
+        public string Type { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -67,5 +75,6 @@ namespace WebApp.Models
             }
             return StructuralComparisons.StructuralEqualityComparer.Equals(buffer3, buffer4);
         }
+    
     }
 }
