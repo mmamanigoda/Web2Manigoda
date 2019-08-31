@@ -1,0 +1,6 @@
+<form class="form-inline" [formGroup]="searchForm" (submit)="search()">
+	
+	<input type="text" class="form-control col-sm-4" id="inlineFormInput" placeholder="Search by Name" formControlName="searchText">
+
+	<button type="submit" class="btn btn-primary"><span class="fa fa-search"></span></button>
+</form>
