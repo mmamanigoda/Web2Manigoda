@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { CijenovnikComponent } from './cijenovnik/cijenovnik.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CijenovnikComponent
   ],
   imports: [
     BrowserModule,
