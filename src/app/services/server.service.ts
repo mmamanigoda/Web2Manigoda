@@ -46,6 +46,14 @@ export class ServerService {
     return this.httpClient.post("http://localhost:52295/api/Ticket", ticket);
   }
 
+  getAllTickets() : Observable<any>{
+    
+    return this.httpClient.get('http://localhost:52295/api/Ticket');
+  }
+
+  updateTicket(Ticket_Id : number, ticket: Karta) : Observable<any>{
+    return this.httpClient.put(`http://localhost:52295/api/Ticket/${Ticket_Id}`, ticket );
+  }
   getTheToken(loginUser : LoginUser) : Observable<any>{
     let headers = new HttpHeaders();
     headers = headers.append('Content-type','application/x-www-form-urlencoded');
