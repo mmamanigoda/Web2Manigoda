@@ -1,0 +1,270 @@
+<form #f="ngForm" name="form" ngNativeValidate>
+    <div class="divHeadline">
+      <h1 style="color:rgb(13, 102, 114);text-align: center; font-size: 8">Ticket price</h1>
+    </div>
+    <div class="divContainer">
+      <div class="container">
+        <div class="row" style="margin-top: 15px">
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <form #f="ngForm" name="formTemporal" ngNativeValidate>
+              <!-- TEMPORALLL -->
+              <div class="panel price panel-red">
+                <div class="panel-heading  text-center">
+                  <h3>Temporal</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <p class="lead" style="font-size:40px"><strong> {{priceTemporal}} din</strong></p>
+                </div>
+  
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularTemporal()" checked
+                    name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample1">Regular</label>
+                </div>
+  
+                <!-- Group of material radios - option 2 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample2" (click)="onCheckedStudentTemporal()"
+                    [disabled]="isDisabledStudent()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample2">Student</label>
+                </div>
+  
+                <!-- Group of material radios - option 3 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample3" (click)="onCheckedPensionerTemporal()"
+                    [disabled]="isDisabledPensioner()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
+                </div>
+                <div class="panel-footer" *ngIf="showButton">
+                  <a class="btn btn-lg btn-block btn-danger" (click)="buttonBuyTemporal()">BUY NOW!</a>
+                </div>
+                <div class="panel-footer" *ngIf="showButtonAdmin">
+                  <a class="btn btn-lg btn-block btn-danger" (click)="buttonEditTemporal()">EDIT!</a>
+                </div>
+                <form>
+                  <div *ngIf="showEditT">
+                    <input #param>
+                    <div>
+                      <button class="button_transparent" (click)="EditT(param.value)"> Edit </button>
+                      <button class="button_transparent" (click)="CloseT()"> Close </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /PRICE ITEM -->
+            </form>
+          </div>
+  
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <form #f="ngForm" ngNativeValidate>
+              <!-- DAILY -->
+              <div class="panel price panel-blue">
+                <div class="panel-heading arrow_box text-center">
+                  <h3>Daily</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <p class="lead" style="font-size:40px"><strong>{{priceDaily}} din </strong></p>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularDaily()" checked
+                    name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample1">Regular</label>
+                </div>
+  
+                <!-- Group of material radios - option 2 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample2" (click)="onCheckedStudentDaily()"
+                    [disabled]="isDisabledStudent()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample2">Student</label>
+                </div>
+  
+                <!-- Group of material radios - option 3 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample3" (click)="onCheckedPensionerDaily()"
+                    [disabled]="isDisabledPensioner()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
+                </div>
+                <div class="panel-footer" *ngIf="showButton">
+                  <a class="btn btn-lg btn-block btn-info" (click)="buttonBuyDaily()">BUY NOW!</a>
+                </div>
+                <div class="panel-footer" *ngIf="showButtonAdmin">
+                  <a class="btn btn-lg btn-block btn-info" (click)="buttonEditDaily()">EDIT!</a>
+                </div>
+  
+                <form>
+                  <div *ngIf="showEditD">
+                    <input #param>
+                    <div>
+                      <button class="button_transparent" (click)="EditD(param.value)"> Edit </button>
+                      <button class="button_transparent" (click)="CloseD()"> Close </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /PRICE ITEM -->
+            </form>
+  
+          </div>
+  
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <form #f="ngForm" ngNativeValidate>
+              <!-- Monthly -->
+              <div class="panel price panel-green">
+                <div class="panel-heading arrow_box text-center">
+                  <h3>Monthly</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <p class="lead" style="font-size:40px"><strong>{{priceMonthly}} din</strong></p>
+                </div>
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularMonthly()" checked
+                    name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample1">Regular</label>
+                </div>
+  
+                <!-- Group of material radios - option 2 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample2" (click)="onCheckedStudentMonthly()"
+                    [disabled]="isDisabledStudent()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample2">Student</label>
+                </div>
+  
+                <!-- Group of material radios - option 3 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample3" (click)="onCheckedPensionerMonthly()"
+                    [disabled]="isDisabledPensioner()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
+                </div>
+                <div class="panel-footer" *ngIf="showButton">
+                  <a class="btn btn-lg btn-block btn-success" (click)="buttonBuyMonthly()">BUY NOW!</a>
+                </div>
+                <div class="panel-footer" *ngIf="showButtonAdmin">
+                  <a class="btn btn-lg btn-block btn-success" (click)="buttonEditMonthly()">EDIT!</a>
+                </div>
+                <form>
+                  <div *ngIf="showEditM">
+                    <input #param>
+                    <div>
+                      <button class="button_transparent" (click)="EditM(param.value)"> Edit </button>
+                      <button class="button_transparent" (click)="CloseM()"> Close </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /PRICE ITEM -->
+            </form>
+          </div>
+  
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <form #f="ngForm" ngNativeValidate>
+              <!-- Yearly -->
+              <div class="panel price panel-grey">
+                <div class="panel-heading arrow_box text-center">
+                  <h3>Yearly</h3>
+                </div>
+                <div class="panel-body text-center">
+                  <p class="lead" style="font-size:40px"><strong>{{priceYearly}} din</strong></p>
+                </div>
+  
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularYearly()" checked
+                    name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample1">Regular</label>
+                </div>
+  
+                <!-- Group of material radios - option 2 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample2" (click)="onCheckedStudentYearly()"
+                    [disabled]="isDisabledStudent()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample2">Student</label>
+                </div>
+  
+                <!-- Group of material radios - option 3 -->
+                <div class="form-check">
+                  <input type="radio" id="materialGroupExample3" (click)="onCheckedPensionerYearly()"
+                    [disabled]="isDisabledPensioner()" name="groupOfMaterialRadios">
+                  <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
+                </div>
+                <div class="panel-footer" *ngIf="showButton">
+                  <a class="btn btn-lg btn-block btn-primary" (click)="buttonBuyYearly()">BUY NOW!</a>
+                </div>
+                <div class="panel-footer" *ngIf="showButtonAdmin">
+                  <a class="btn btn-lg btn-block btn-primary" (click)="buttonEditYearly()">EDIT!</a>
+                </div>
+                <form>
+                  <div *ngIf="showEditY">
+                    <input #param>
+                    <div>
+                      <button class="button_transparent" (click)="EditY(param.value)"> Edit </button>
+                      <button class="button_transparent" (click)="CloseY()"> Close </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /PRICE ITEM -->
+            </form>
+          </div>
+          <div *ngIf="showButton" class="divPayPal">
+            <label></label>
+            <div>
+              <input type="radio" id="materialGroupExample2" (click)="onCheckedTemporal()" name="groupOfMaterialRadios">
+              <label for="materialGroupExample2">Temporal</label>
+              <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedDaily()" name="groupOfMaterialRadios">
+              <label for="materialGroupExample2">Daily</label>
+              <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedMonthly()" name="groupOfMaterialRadios">
+              <label for="materialGroupExample2">Monthly</label>
+              <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedYearly()" name="groupOfMaterialRadios">
+              <label for="materialGroupExample2">Yearly</label>
+            </div>
+            <div style="margin-left: 280px; margin-top: -30px" id="paypal-checkout-btn"></div>
+            
+          </div>
+          <div *ngIf="showButton" style="margin-top: 20px">
+            <a style="width: 85px" class="btn btn-lg btn-block btn-primary" (click)="showBuyTicket()">Show ticket!</a>
+          </div>
+          <form style="background-color:rgb(209, 211, 211); margin-left: 30px;margin-top: 20px; width: 600px">
+            <div *ngIf="showButton">
+  
+              <table mdbTable striped="true">
+                <thead>
+                  <tr>
+                    <th style="width: 200px; height: 70;">
+                      <font size="4">User ID</font>
+                    </th>
+                    <th style="width: 200px;height: 70">
+                      <font size="4">Type of ticket</font>
+                    </th>
+                    <th style="width: 200px;height: 70">
+                      <font size="4">Day</font>
+                    </th>
+                    <!-- <th>Valid</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr mdbTableCol *ngFor="let t of showTicketList">
+                    <td>{{t.User_Id}}</td>
+                    <td *ngIf="t.TicketType == 0">
+                      <font size="3">Temporal</font>
+                    </td>
+                    <td *ngIf="t.TicketType == 1">
+                      <font size="3">Daily</font>
+                    </td>
+                    <td *ngIf="t.TicketType == 2">
+                      <font size="3">Monthly</font>
+                    </td>
+                    <td *ngIf="t.TicketType == 3">
+                      <font size="3">Yearly</font>
+                    </td>
+                    <td>{{t.DateOfPurchase}}</td>
+                    <!-- <td>{{t.Valid}}</td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+  
+      </div>
+  
+    </div>
+  </form>

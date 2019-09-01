@@ -9,16 +9,16 @@ import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { CijenovnikComponent } from './cijenovnik/cijenovnik.component';
-import { ValidateTicketComponent } from './validate-ticket/validate-ticket.component';
+import { PriceListComponent } from './price-list/price-list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    CijenovnikComponent,
-    ValidateTicketComponent
+    PriceListComponent,
+  
   ],
   imports: [
     BrowserModule,

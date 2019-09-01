@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { CijenovnikComponent } from './cijenovnik/cijenovnik.component';
+import { PriceListComponent } from './price-list/price-list.component';
+
 
 
 const routes: Routes = [
@@ -17,10 +18,10 @@ const routes: Routes = [
       component: LoginComponent
     }
    ,
-    { 
-      path: 'Cijenekarata', 
-      component: CijenovnikComponent
-    }
+   { 
+    path: 'PriceList', 
+    component: PriceListComponent 
+  },
 
 ];
 

@@ -1,4 +1,4 @@
-export class Karta{
+export class Ticket{
 
     TicketType: string;
     DateOfPurchase : Date;

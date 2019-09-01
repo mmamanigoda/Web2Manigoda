@@ -3,8 +3,9 @@ import {HttpClient, HttpParams, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { AppUser } from '../models/appUser.model';
 import {LoginUser} from '../models/loginUser.model';
-import { Karta } from '../models/karta';
+
 import { PriceListItem } from '../models/priceListitem';
+import { Ticket } from '../models/ticket.model';
 
 
 
@@ -42,7 +43,7 @@ export class ServerService {
   putTicket(id_T:number, priceListItem: PriceListItem): any{
     return this.httpClient.put(`http://localhost:52295/api/PriceListItem/${id_T}`, priceListItem);}
 
-  postTicket(ticket:Karta): Observable<any>{
+  postTicket(ticket:Ticket): Observable<any>{
     return this.httpClient.post("http://localhost:52295/api/Ticket", ticket);
   }
 
@@ -51,7 +52,7 @@ export class ServerService {
     return this.httpClient.get('http://localhost:52295/api/Ticket');
   }
 
-  updateTicket(Ticket_Id : number, ticket: Karta) : Observable<any>{
+  updateTicket(Ticket_Id : number, ticket: Ticket) : Observable<any>{
     return this.httpClient.put(`http://localhost:52295/api/Ticket/${Ticket_Id}`, ticket );
   }
   getTheToken(loginUser : LoginUser) : Observable<any>{
