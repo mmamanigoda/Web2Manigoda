@@ -211,7 +211,9 @@
             <!-- /PRICE ITEM -->
           </form>
         </div>
-       
+        <div *ngIf="showButton" style="margin-top: 20px">
+            <a style="width: 85px" class="btn btn-lg btn-block btn-primary" (click)="showBuyTicket()">Show ticket!</a>
+          </div>
         <form style="background-color:rgb(209, 211, 211); margin-left: 30px;margin-top: 20px; width: 600px">
           <div *ngIf="showButton">
 
