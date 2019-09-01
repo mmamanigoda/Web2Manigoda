@@ -1,7 +1,12 @@
+
+
 <div class="wrapper fadeInDown" style="margin-top: 100px">
+    
     <div id="formContent">
+       
       <!-- Login Form -->
       <form  #f="ngForm" (ngSubmit)="Login(f.value, f)" ngNativeValidate>
+          
         <input type="text"  class="fadeIn second" required="required" name="UserName" ngModel  #UserName="ngModel">
         <input type="text"  class="fadeIn third" required="required" name="Password" ngModel  #Password="ngModel">
         <input type="submit" class="fadeIn fourth" value="Log In">

@@ -5,10 +5,8 @@
   
   <div class="divHeadline">
      
-    <h1 style="color:rgb(13, 102, 114);text-align: center; font-size: 8">Ticket price</h1>
-    <div class="imgcontainer">
-        <img src="assets/images/karte.jpeg"  alt="picture" class="avatar">
-      </div>
+    <h1 style="color:rgb(13, 102, 114);text-align: center; font-size: 8">CIJENE KARATA</h1>
+    
     
   </div>
   <div class="divContainer">
@@ -19,10 +17,10 @@
             <!-- TEMPORALLL -->
             <div class="panel price panel-red">
               <div class="panel-heading  text-center">
-                <h3>Temporal</h3>
+                <h3>PRIVREMENA</h3>
               </div>
               <div class="panel-body text-center">
-                <p class="lead" style="font-size:40px"><strong> {{priceTemporal}} din</strong></p>
+                <p class="lead" style="font-size:40px"><strong> {{priceTemporal}} </strong></p>
               </div>
 
               <div class="form-check">
@@ -45,7 +43,7 @@
                 <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
               </div>
               <div class="panel-footer" *ngIf="showButton">
-                <a class="btn btn-lg btn-block btn-danger" (click)="buttonBuyTemporal()">BUY NOW!</a>
+                <a class="btn btn-lg btn-block btn-danger" (click)="buttonBuyTemporal()">KUPI!</a>
               </div>
               <div class="panel-footer" *ngIf="showButtonAdmin">
                 <a class="btn btn-lg btn-block btn-danger" (click)="buttonEditTemporal()">EDIT!</a>
@@ -69,10 +67,10 @@
             <!-- DAILY -->
             <div class="panel price panel-blue">
               <div class="panel-heading arrow_box text-center">
-                <h3>Daily</h3>
+                <h3>DNEVNA</h3>
               </div>
               <div class="panel-body text-center">
-                <p class="lead" style="font-size:40px"><strong>{{priceDaily}} din </strong></p>
+                <p class="lead" style="font-size:40px"><strong>{{priceDaily}}  </strong></p>
               </div>
               <div class="form-check">
                 <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularDaily()" checked
@@ -94,7 +92,7 @@
                 <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
               </div>
               <div class="panel-footer" *ngIf="showButton">
-                <a class="btn btn-lg btn-block btn-info" (click)="buttonBuyDaily()">BUY NOW!</a>
+                <a class="btn btn-lg btn-block btn-info" (click)="buttonBuyDaily()">KUPI!</a>
               </div>
               <div class="panel-footer" *ngIf="showButtonAdmin">
                 <a class="btn btn-lg btn-block btn-info" (click)="buttonEditDaily()">EDIT!</a>
@@ -120,10 +118,10 @@
             <!-- Monthly -->
             <div class="panel price panel-green">
               <div class="panel-heading arrow_box text-center">
-                <h3>Monthly</h3>
+                <h3>MJESECNA</h3>
               </div>
               <div class="panel-body text-center">
-                <p class="lead" style="font-size:40px"><strong>{{priceMonthly}} din</strong></p>
+                <p class="lead" style="font-size:40px"><strong>{{priceMonthly}} </strong></p>
               </div>
               <div class="form-check">
                 <input type="radio" id="materialGroupExample1" (click)="onCheckedRegularMonthly()" checked
@@ -145,7 +143,7 @@
                 <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
               </div>
               <div class="panel-footer" *ngIf="showButton">
-                <a class="btn btn-lg btn-block btn-success" (click)="buttonBuyMonthly()">BUY NOW!</a>
+                <a class="btn btn-lg btn-block btn-success" (click)="buttonBuyMonthly()">KUPI!</a>
               </div>
               <div class="panel-footer" *ngIf="showButtonAdmin">
                 <a class="btn btn-lg btn-block btn-success" (click)="buttonEditMonthly()">EDIT!</a>
@@ -169,10 +167,10 @@
             <!-- Yearly -->
             <div class="panel price panel-grey">
               <div class="panel-heading arrow_box text-center">
-                <h3>Yearly</h3>
+                <h3>GODISNJA</h3>
               </div>
               <div class="panel-body text-center">
-                <p class="lead" style="font-size:40px"><strong>{{priceYearly}} din</strong></p>
+                <p class="lead" style="font-size:40px"><strong>{{priceYearly}} </strong></p>
               </div>
 
               <div class="form-check">
@@ -195,7 +193,7 @@
                 <label style="margin-left: 30px" for="materialGroupExample3">Pensioner</label>
               </div>
               <div class="panel-footer" *ngIf="showButton">
-                <a class="btn btn-lg btn-block btn-primary" (click)="buttonBuyYearly()">BUY NOW!</a>
+                <a class="btn btn-lg btn-block btn-primary" (click)="buttonBuyYearly()">KUPI!</a>
               </div>
               <div class="panel-footer" *ngIf="showButtonAdmin">
                 <a class="btn btn-lg btn-block btn-primary" (click)="buttonEditYearly()">EDIT!</a>
@@ -213,23 +211,7 @@
             <!-- /PRICE ITEM -->
           </form>
         </div>
-        <div *ngIf="showButton" class="divPayPal">
-          <label></label>
-          <div>
-            <input type="radio" id="materialGroupExample2" (click)="onCheckedTemporal()" name="groupOfMaterialRadios">
-            <label for="materialGroupExample2">Temporal</label>
-            <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedDaily()" name="groupOfMaterialRadios">
-            <label for="materialGroupExample2">Daily</label>
-            <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedMonthly()" name="groupOfMaterialRadios">
-            <label for="materialGroupExample2">Monthly</label>
-            <input style="margin-left: 20px" type="radio" id="materialGroupExample2" (click)="onCheckedYearly()" name="groupOfMaterialRadios">
-            <label for="materialGroupExample2">Yearly</label>
-          </div>
-          <div style="margin-left: 280px; margin-top: -30px" id="paypal-checkout-btn"></div>
-        </div>
-        <div *ngIf="showButton" style="margin-top: 20px">
-          <a style="width: 85px" class="btn btn-lg btn-block btn-primary" (click)="showBuyTicket()">Show ticket!</a>
-        </div>
+       
         <form style="background-color:rgb(209, 211, 211); margin-left: 30px;margin-top: 20px; width: 600px">
           <div *ngIf="showButton">
 
@@ -240,10 +222,10 @@
                     <font size="4">User ID</font>
                   </th>
                   <th style="width: 200px;height: 70">
-                    <font size="4">Type of ticket</font>
+                    <font size="4">TIP KARTE</font>
                   </th>
                   <th style="width: 200px;height: 70">
-                    <font size="4">Day</font>
+                    <font size="4">DAN</font>
                   </th>
                   <!-- <th>Valid</th> -->
                 </tr>
@@ -252,16 +234,16 @@
                 <tr mdbTableCol *ngFor="let t of showTicketList">
                   <td>{{t.User_Id}}</td>
                   <td *ngIf="t.TicketType == 0">
-                    <font size="3">Temporal</font>
+                    <font size="3">REDOVNA</font>
                   </td>
                   <td *ngIf="t.TicketType == 1">
-                    <font size="3">Daily</font>
+                    <font size="3">DNEVNA</font>
                   </td>
                   <td *ngIf="t.TicketType == 2">
-                    <font size="3">Monthly</font>
+                    <font size="3">MJESECNA</font>
                   </td>
                   <td *ngIf="t.TicketType == 3">
-                    <font size="3">Yearly</font>
+                    <font size="3">GODISNJA</font>
                   </td>
                   <td>{{t.DateOfPurchase}}</td>
                   <!-- <td>{{t.Valid}}</td> -->

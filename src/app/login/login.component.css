@@ -4,7 +4,7 @@
 
   
 a {
-    color: #92badd;
+    color: #dd9292;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -17,7 +17,7 @@ a {
     text-transform: uppercase;
     display:inline-block;
     margin: 40px 8px 10px 8px; 
-    color: #cccccc;
+    color: red;
   }
   
   
@@ -37,7 +37,7 @@ a {
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #fff;
+    background:black;
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -75,9 +75,9 @@ a {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
+    background-color:red;
     border: none;
-    color: white;
+    color: blue;
     padding: 15px 80px;
     text-align: center;
     text-decoration: none;
@@ -109,7 +109,7 @@ a {
   }
   
   input[type=text] {
-    background-color: #f6f6f6;
+    background-color:green;
     border: none;
     color: #0d0d0d;
     padding: 15px 32px;
@@ -130,12 +130,12 @@ a {
   }
   
   input[type=text]:focus {
-    background-color: #fff;
+    background-color:red;
     border-bottom: 2px solid #5fbae9;
   }
   
   input[type=text]:placeholder {
-    color: #cccccc;
+    color: yellowgreen;
   }
   
   
@@ -229,7 +229,7 @@ a {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #56baed;
+    background-color:red;
     content: "";
     transition: width 0.2s;
   }

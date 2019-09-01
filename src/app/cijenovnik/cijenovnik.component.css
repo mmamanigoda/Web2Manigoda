@@ -5,6 +5,8 @@
 body {
         padding-top: 40px;
         padding-bottom: 40px;
+        color: #D04E50;
+        background-color: #71DF71
         
     	
       }
@@ -52,7 +54,7 @@ body {
 		}
 		
 		.price .panel-footer {
-			color: #fff;
+			color: #D04E50;
 			border-bottom:0px;
 			background-color:  rgba(0,0,0, .1);
 			box-shadow: 0px 3px 0px rgba(0,0,0, .3);
@@ -68,8 +70,8 @@ body {
 	
 		
 		.price.panel-green>.panel-heading {
-			color: #fff;
-			background-color: #57AC57;
+			color: red;
+			
 			border-color: #71DF71;
 			border-bottom: 1px solid #71DF71;
 		}
@@ -96,8 +98,8 @@ body {
 	
 		
 		.price.panel-blue>.panel-heading {
-			color: #fff;
-			background-color: #608BB4;
+			color: red;
+			
 			border-color: #78AEE1;
 			border-bottom: 1px solid #78AEE1;
 		}
@@ -121,11 +123,12 @@ body {
 		}
 		
 		/* red price */
-		
+        
+        
 	
 		.price.panel-red>.panel-heading {
-			color: #fff;
-			background-color: #D04E50;
+			color:red;
+		
 			border-color: #FF6062;
 			border-bottom: 1px solid #FF6062;
 		}
@@ -154,8 +157,8 @@ body {
 		
 	
 		.price.panel-grey>.panel-heading {
-			color: #fff;
-			background-color: #6D6D6D;
+			color: red;
+			
 			border-color: #B7B7B7;
 			border-bottom: 1px solid #B7B7B7;
 		}
@@ -183,7 +186,7 @@ body {
 		
 	
 		.price.panel-white>.panel-heading {
-			color: #333;
+			color:yellow;
 			background-color: #f9f9f9;
 			border-color: #ccc;
 			border-bottom: 1px solid #ccc;
